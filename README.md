@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Project Setup
+
+- **Clone the repo - git clone https://github.com/Akhil0632/lms-frontend.git**
+- **Open the terminal and change the directory to the project directory - cd lms-frontend**
+- **Install dependencies - npm install**
+- **Start React development server - npm start**
+- **Run migration - php artisan migrate**
+
+### URL of Project
+
+- **Visit the url http://localhost:3000 to get into the application.**
+
