@@ -50,23 +50,23 @@ const CourseList = () => {
 
     const confirmDelete = async () => {
         try {
-            console.log(`🗑️ Attempting to delete course ID: ${courseToDelete.id}`);
-            console.log(`📤 Sending DELETE request to: /api/courses/${courseToDelete.id}`);
+            console.log(`Attempting to delete course ID: ${courseToDelete.id}`);
+            console.log(`Sending DELETE request to: /api/courses/${courseToDelete.id}`);
             
             const response = await courseAPI.deleteCourse(courseToDelete.id);
-            console.log('✅ Delete response:', response.data);
+            console.log('Delete response:', response.data);
             
             if (response.data && response.data.success) {
-                console.log('✅ Course deleted successfully');
+                console.log('Course deleted successfully');
                 await fetchCourses();
                 setShowDeleteModal(false);
                 setCourseToDelete(null);
             } else {
-                console.error('❌ Delete failed - invalid response:', response.data);
+                console.error('Delete failed - invalid response:', response.data);
                 setError(response.data?.message || 'Failed to delete course. Invalid response.');
             }
         } catch (error) {
-            console.error('❌ Error deleting course:', error);
+            console.error('Error deleting course:', error);
             
             // Detailed error logging
             console.error('Error details:', {
